@@ -5,8 +5,12 @@
 
 if [ $# -ne 7 ]; then
     echo "USAGE: ${0} USERNAME DIRNAME REPO1 REPO2 DESTREPO PROJECT HOSTNAME:PORT"
+    echo
+    echo "--> This script merges the content & histories of 2 git repos, 'R1' and 'R2',"
+    echo "    into a 3rd repo 'R', placing R2's contents in a subdir of R named '\$R2.Name'"
+    echo
     echo "Error --> Need 7 ARGS: Git Username, Output Dir (under ${HOME}),"
-    echo "                       Repo1 Name, Repo2 Name, Destnation Repo Name,"
+    echo "                       R1 Name, R2 Name, Destnation Repo Name,"
     echo "                       Stash Project Name and Server:Port"
     echo
     exit 1
